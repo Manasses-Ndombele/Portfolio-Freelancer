@@ -1,0 +1,604 @@
+@use "base/reset"
+@use "base/variables" as var
+@use "base/mixins" as mix
+@use "base/animations"
+@use "components/button"
+@use "components/subtitle"
+
+#main-header
+    background-color: var.$quartenary-color-b
+
+    #main-area
+        @include mix.tablet()
+            width: 30%
+
+        #header-brand
+            font: 700 1.2em var.$montserrat
+            text-decoration: none
+            color: var.$primary-color-a
+
+            img
+                width: 6rem
+                height: 5rem
+
+    #main-menu-btn
+        background-color: var.$secondary-color-a
+        border: none
+        width: 3.5rem
+        transition: all .4s ease-in
+
+        &.main-menu-opened
+            align-items: center !important
+            justify-content: center !important
+
+            span
+                width: 100% !important
+                &:first-child,
+                &:nth-child(2)
+                    display: none !important
+
+                &:last-child
+                    width: 60% !important
+                    margin-bottom: 0px !important
+
+        span
+            background-color: var.$quartenary-color-a
+            height: 4px
+            transition: all .6s ease-in
+
+            &:first-child
+                width: 70%
+
+            &:nth-child(2)
+                width: 80%
+
+            &:last-child
+                width: 90%
+
+    #main-menu
+        height: 10px
+        visibility: hidden
+        transition: all .6s ease-in
+        @include mix.tablet()
+            visibility: visible
+            opacity: 1 !important
+            height: min-content
+            width: 70%
+
+        &.opened
+            visibility: visible
+            opacity: 1 !important
+            height: 100%
+            padding-bottom: 1rem
+
+        #main-menu-nav
+            display: grid
+            place-items: center
+            @include mix.tablet()
+                gap: .6rem
+
+            a
+                font-family: 500 1.1em var.$poppins
+                text-decoration: none
+                color: var.$primary-color-b
+                background-image: linear-gradient(to right, var.$secondary-color-b, var.$secondary-color-a 50%, var.$tertiary-color-a 50%)
+                background-size: 200% 100%
+                background-position: -100%
+                display: inline-block
+                padding: 5px 0
+                position: relative
+                -webkit-background-clip: text
+                -webkit-text-fill-color: var.$primary-color-b
+                transition: all 0.3s ease-in-out
+                -webkit-transition: all 0.3s ease-in-out
+                @include mix.tablet()
+                    font-size: 1.2em
+
+                &::before
+                    content: ''
+                    background: var.$secondary-color-a
+                    display: block
+                    position: absolute
+                    bottom: -3px
+                    left: 0px
+                    width: 0px
+                    height: 3px
+                    transition: all 0.3s ease-in-out
+
+                &:hover
+                    color: transparent
+                    -webkit-text-fill-color: transparent
+                    background-position: 0
+
+                &:hover::before
+                    width: 100%
+
+        #extra-options
+            @include mix.tablet()
+                width: min-content !important
+
+            .input-group
+                @include mix.tablet()
+                    width: min-content
+                    flex-wrap: nowrap
+
+                .input-group-text
+                    background-color: var.$quartenary-color-a
+                    border: none
+                    color: var.$primary-color-b
+
+                .form-select
+                    background-color: var.$quartenary-color-a
+                    color: var.$primary-color-b
+                    font-family: var.$poppins
+                    font-weight: 500
+                    @include mix.tablet()
+                        width: min-content
+
+                    &:focus
+                        box-shadow: none
+
+            button
+                box-shadow: none
+
+main
+    #intro-area
+        img
+            box-shadow: 0px 0px 15px var.$secondary-color-a
+            @include mix.desktop()
+                width: 15rem
+                height: 15rem
+
+        span
+            font: 400 1.1em var.$poppins
+            color: var.$secondary-color-a
+            @include mix.tablet()
+                font-size: 1.3em
+
+            strong
+                font-family: var.$poppins
+
+        h1
+            font-family: var.$montserrat
+            font-weight: 900
+            color: var.$primary-color-a
+            @include mix.tablet()
+                font-size: 2em
+                width: 80%
+
+            @include mix.desktop()
+                width: 100%
+                font-size: 2.2em
+
+            @include mix.tvDesktop()
+                font-size: 2.4em
+
+        p
+            color: var.$quartenary-color-a
+            font: 600 1.2em var.$poppins
+            @include mix.tablet()
+                width: 70%
+                font-size: 1.3em
+
+            @include mix.desktop()
+                width: 100%
+
+            @include mix.tvDesktop()
+                width: 80%
+                font-size: 1.4em
+
+    #solutions-area
+        background-color: var.$tertiary-color-b
+
+        h2
+            background: none
+            color: var.$secondary-color-a
+            text-shadow: 0px 0px 8px var.$primary-color-b
+
+        #solutions-items
+            display: grid
+            grid-template-columns: 10rem 10rem
+            grid-template-rows: auto auto auto
+            @include mix.tablet()
+                grid-template-columns: 10rem 10rem 10rem
+                grid-template-rows: auto auto
+
+            @include mix.desktop()
+                width: 80%
+
+            .solution-item
+                width: 10rem
+
+                i
+                    font-size: 2.5em
+                    color: var.$quartenary-color-b
+
+                p
+                    color: var.$quartenary-color-a
+                    font-family: 600 1.4em var.$poppins
+
+    #projects-area
+        #project-items
+            display: grid
+            grid-template-columns: 100%
+            grid-template-rows: auto auto auto auto
+            @include mix.tablet()
+                grid-template-columns: 50% 50%
+                gap: 0 !important
+
+            @include mix.desktop()
+                width: 70%
+
+            @include mix.tvDesktop()
+                width: 60%
+
+            .project-img-area
+                img
+                    position: relative
+
+            .project-datas-overlay
+                background-color: var.$tertiary-color-c
+                width: 100vw
+                height: 100vh
+                z-index: 2 !important
+
+                &.hidden
+                    visibility: hidden
+
+                &.show
+                    visibility: visible
+
+                .project-datas-modal
+                    background-image: linear-gradient(45deg, var.$tertiary-color-a, var.$tertiary-color-b)
+                    box-shadow: 0px 0px 20px var.$tertiary-color-b
+                    @include mix.tablet()
+                        width: 70%
+
+                    @include mix.desktop()
+                        width: 50%
+
+                    @include mix.tvDesktop()
+                        width: 40%
+
+                    .project-img-top
+                        .close-btn
+                            border: none
+                            background-color: transparent
+                            color: var.$primary-color-a
+                            font-size: 2em
+                            top: 3%
+                            right: 3%
+                            @include mix.tablet()
+                                font-size: 2.8em
+
+                        img
+                            @include mix.tablet()
+                                height: 20rem
+
+                            @include mix.desktop()
+                                height: 18rem
+
+                    .project-data
+                        h3
+                            font-family: var.$montserrat
+                            color: var.$secondary-color-a
+                            @include mix.tablet()
+                                font-size: 2em
+
+                        p
+                            font-family: var.$poppins
+                            font-weight: 600
+                            color: var.$quartenary-color-a
+                            height: 8rem
+                            overflow-y: scroll
+                            @include mix.tablet()
+                                font-size: 1.4em
+
+                        a
+                            text-decoration: none
+
+                            .modal-cta-btn
+                                border: none
+                                background-color: var.$primary-color-a
+                                font-family: Arial, Helvetica, sans-serif
+                                color: var.$quartenary-color-b
+                                -webkit-transition: all .5s ease-in
+                                transition: all .5s ease-in
+                                @include mix.tablet()
+                                    font-size: 1.4em
+
+                                i
+                                    font-size: 1.1em
+                                    -webkit-transition: all .5s ease-in
+                                    transition: all .2s ease-out
+
+                                span
+                                    -webkit-transition: all .5s ease-in
+                                    transition: all .2s ease-out
+
+                                &:hover,
+                                &:active
+                                    color: var.$secondary-color-b
+                                    text-decoration: underline
+                                    text-shadow: 0px 0px 3px var.$secondary-color-b
+                                    background-color: var.$tertiary-color-b
+
+                                    i
+                                        transform: translateY(-4px)
+
+                                    span
+                                        transform: translateY(-4px)
+
+            .project-modal-btn
+                border: none
+                background-color: var.$secondary-color-a
+                color: var.$quartenary-color-a
+                font-size: 2em
+
+    #skills-area
+        @include mix.desktop()
+            width: 80%
+
+        @include mix.tvDesktop()
+            width: 70%
+
+        h3
+            font: 700 1.8em var.$montserrat
+            color: var.$primary-color-a
+
+        h4
+            color: var.$secondary-color-a
+            font: 700 1.6em var.$poppins
+
+        .hardskills-items
+            display: grid
+            grid-template-columns: auto auto
+            grid-row-gap: 1rem
+            @include mix.tablet()
+                grid-template-columns: auto auto auto auto
+                grid-column-gap: 2rem
+
+            @include mix.desktop()
+                grid-template-columns: auto auto auto auto auto
+
+            .hardskill-item
+                img
+                    width: 5rem
+                    height: 5rem
+                    @include mix.tablet()
+                        width: 6rem
+                        height: 6rem
+
+                span
+                    color: var.$quartenary-color-a
+                    font: 400 1.3em var.$poppins
+                    @include mix.tablet()
+                        font-size: 1.5em
+
+        .skill-list-container
+            list-style-type: none
+
+            li
+                &::before
+                    content: '\f270'
+                    display: inline
+                    font-family: bootstrap-icons
+                    color: var.$tertiary-color-b
+                    font-size: 1.3em
+                    @include mix.tablet()
+                        font-size: 1.5em
+
+                span
+                    font: 400 1.1em var.$poppins
+                    color: var.$secondary-color-a
+                    padding-left: .1rem
+                    @include mix.tablet()
+                        font-size: 1.3em
+
+        .softskill-item
+            @include mix.tablet()
+                width: 15rem
+
+            i
+                font-size: 2.5em
+                color: var.$quartenary-color-b
+                @include mix.tablet()
+                    font-size: 3em
+
+            p
+                color: var.$quartenary-color-a
+                font: 500 1.1em var.$poppins
+                @include mix.tablet()
+                    font-size: 1.5em
+
+    #profile-area
+        #profile-datas
+            @include mix.desktop()
+                width: 80%
+
+            @include mix.tvDesktop()
+                width: 70%
+
+            img
+                width: 20rem
+                background-image: linear-gradient(to top, var.$primary-color-b 60%, var.$primary-color-a)
+
+            #profile-data
+                @include mix.tablet()
+                    width: 50%
+
+                @include mix.tvDesktop()
+                    width: 30rem
+
+                p
+                    color: var.$quartenary-color-a
+                    font: 600 1.2em var.$poppins
+
+    #diferential-area
+        #diferential-items
+            display: grid
+            grid-template-columns: 100%
+            grid-template-rows: auto auto auto auto
+            grid-row-gap: 1rem
+            @include mix.tablet()
+                grid-template-columns: 20rem 20rem
+                grid-row-gap: 2rem
+
+            @include mix.tvDesktop()
+                grid-row-gap: 3rem
+                grid-column-gap: 4rem
+                grid-template-columns: 25rem 25rem
+
+            .diferential-item
+                background-color: var.$primary-color-b
+                color: var.$quartenary-color-b
+
+                .diferential-header-item
+                    i
+                        font-size: 1.3em
+                        @include mix.tablet()
+                            font-size: 1.4em
+
+                    span
+                        font: 700 1.2em var.$poppins
+                        @include mix.tablet()
+                            font-size: 1.3em
+
+                p
+                    font-size: 1.1em
+                    @include mix.tablet()
+                        font-size: 1.2em
+
+    #main-form-area
+        form
+            @include mix.tablet()
+                width: 70%
+
+            @include mix.desktop()
+                width: 60%
+
+            @include mix.tvDesktop()
+                width: 50%
+
+            #form-fields
+                .form-label
+                    color: var.$quartenary-color-b
+                    font-family: var.$poppins
+                    @include mix.tablet()
+                        font-size: 1.2em
+
+                .form-control
+                    background-color: var.$tertiary-color-b
+                    backdrop-filter: blur(2px)
+                    border: none
+                    color: var.$quartenary-color-a
+                    font-family: var.$poppins
+                    @include mix.tablet()
+                        font-size: 1.2em
+
+                    &:focus
+                        box-shadow: none
+
+            #form-action
+                button
+                    font-family: Arial, Helvetica, sans-serif
+                    border: 2px solid var.$quartenary-color-a
+                    background-color: transparent
+                    color: var.$quartenary-color-a
+                    font-size: 1.3em
+                    letter-spacing: 2px
+                    -webkit-transition: all .5s ease-in
+                    transition: all .5s ease-in
+                    @include mix.tablet()
+                        width: 50% !important
+
+                    @include mix.desktop()
+                        width: 30%
+
+                    &:hover,
+                    &:active
+                        letter-spacing: normal
+                        background-color: var.$quartenary-color-a
+                        color: var.$tertiary-color-c
+                        border-color: var.$quartenary-color-b
+
+    #modal-message-client
+        .modal-content
+            background-image: linear-gradient(45deg, var.$tertiary-color-a, var.$tertiary-color-b)
+            box-shadow: 0px 0px 20px var.$tertiary-color-b
+
+            .modal-header
+                border: none
+
+                .modal-title
+                    font-family: var.$poppins
+                    font-weight: 700
+                    color: var.$secondary-color-a
+
+                button
+                    border: none
+                    background-color: transparent
+                    color: var.$primary-color-b
+                    font-size: 1.8em
+
+            p
+                font-family: var.$poppins
+                font-weight: 600
+                color: var.$quartenary-color-a
+                @include mix.tablet()
+                    font-size: 1.2em
+
+    #social-and-contacts-area
+        #social-and-contacts-links
+            @include mix.tablet()
+                display: grid !important
+                grid-template-rows: auto auto
+                grid-template-columns: auto auto
+                grid-row-gap: 1rem
+                grid-column-gap: 4rem
+
+            @include mix.desktop()
+                width: 80%
+
+            a
+                text-decoration: none
+                color: var.$quartenary-color-b
+                transition: all .5s ease-in
+                @include mix.tablet()
+                    width: 20rem
+
+                &:hover
+                    color: var.$tertiary-color-b
+
+                    section
+                        span
+                            &:first-child
+                                font-weight: bold
+
+                            &:last-child
+                                text-decoration: underline
+
+                i
+                    font-size: 2em
+
+                section
+                    font-family: var.$poppins
+                    font-weight: 400
+
+                    span
+                        @include mix.tablet()
+                            &:first-child
+                                font-size: 1.3em
+
+                            &:last-child
+                                font-size: 1.1em
+
+footer
+    background-image: linear-gradient(to top, var.$tertiary-color-a, var.$tertiary-color-b)
+
+    p 
+        color: var.$quartenary-color-b
+        font-family: var.$poppins
+        font-weight: 400
+        @include mix.tablet()
+            font-size: 1.4em

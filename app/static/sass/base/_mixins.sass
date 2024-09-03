@@ -1,0 +1,26 @@
+@use "_variables" as var
+
+=tablet()
+    @media screen and (min-width: 768px)
+        @content
+
+=desktop()
+    @media screen and (min-width: 992px)
+        @content
+
+=tvDesktop()
+    @media screen and (min-width: 1200px)
+        @content
+
+=trackingInExpandFwdBold($timing)
+    -webkit-animation: tracking-in-expand-fwd-top $timing cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    animation: tracking-in-expand-fwd-top $timing cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+
+=slideInBlurredLeft($timing)
+    -webkit-animation: slide-in-blurred-left $timing cubic-bezier(0.230, 1.000, 0.320, 1.000) both
+    animation: slide-in-blurred-left $timing cubic-bezier(0.230, 1.000, 0.320, 1.000) both
+
+=slideInLeft($timing)
+    -webkit-animation: slide-in-left $timing cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: slide-in-left $timing cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important

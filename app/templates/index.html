@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manassés Ndombele - Portfolio Freelancer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/Portfolio-Logo.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.min.css') }}">
+    </head>
+    <body>
+        <header id="main-header" class="d-md-flex align-items-md-center px-md-2 mb-md-4">
+            <div id="main-area" class="d-flex align-items-start justify-content-between">
+                <a id="header-brand" class="d-flex align-items-center m-2 flicker-in-1 text-uppercase" href="{{ url_for('index') }}" target="_self">
+                    <img src="{{ url_for('static', filename='images/Portfolio Logo.png') }}" alt="Logo of portfolio of freelancer developer Manassés Ndombele">
+                    Dev
+                    <br>
+                    Manassés
+                </a>
+                <button type="button" id="main-menu-btn" class="flicker-in-1 h-100 d-flex flex-column align-items-end my-auto me-2 py-3 rounded-2 d-md-none">
+                    <span class="d-block mb-1"></span>
+                    <span class="d-block mb-1"></span>
+                    <span class="d-block"></span>
+                </button>
+            </div>
+            <menu id="main-menu" class="ps-4 mt-0 opacity-0 d-md-flex align-items-md-center justify-content-md-between gap-md-1 m-md-0 p-md-0">
+                <nav id="main-menu-nav" target="_self" class="d-flex flex-column align-items-start gap-2 gap-md-3 flex-md-row gap-lg-4 gap-xl-5">
+                    <a href="#solutions-area" target="_self" class="slide-in-blurred-left-1" data-translation="true"></a>
+                    <a href="#projects-area" target="_self" class="slide-in-blurred-left-2" data-translation="true"></a>
+                    <a href="#skills-area" target="_self" class="slide-in-blurred-left-3" data-translation="true"></a>
+                    <a href="#profile-area" target="_self" class="slide-in-blurred-left-4" data-translation="true"></a>
+                </nav>
+                <div id="extra-options" class="mt-3 pe-3 w-100 mt-md-0 pe-md-0">
+                    <div class="input-group mb-3 mb-md-0 flicker-in-1">
+                        <span class="input-group-text">
+                            <i class="bi bi-globe"></i>
+                        </span>
+                        <select class="form-select">
+                            <option value="pt-br" data-translation="true"></option>
+                            <option value="en-us" data-translation="true"></option>
+                        </select>
+                    </div>
+                    <a href="#main-form-area" target="_self" class="cta-link-btn d-md-flex justify-content-md-center w-100 d-md-none">
+                        <button type="button" class="cta-btn w-100 opacity-0 rounded-2 py-2" data-translation="true"></button>
+                    </a>
+                </div>
+            </menu>
+        </header>
+        <main>
+            <div id="intro-area" class="p-3 p-3 d-lg-flex flex-lg-row-reverse align-items-lg-center justify-content-lg-between">
+                <div id="intro-area-img" class="w-100 d-flex justify-content-center justify-content-lg-end pe-lg-5">
+                    <img src="{{ url_for('static', filename='images/perfil 1.jpg') }}" alt="Profile photo of developer fullstack freelancer Manassés Ndombele" class="rounded-circle me-lg-5 slide-in-blurred-top">
+                </div>
+                <div id="intro-area-body" class="mt-4 d-flex flex-column align-items-center gap-2 align-items-lg-start">
+                    <span class="text-center text-lg-start tracking-in-expand-fwd-top-2"><strong>Manassés Ndombele</strong> - Dev Fullstack Junior</span>
+                    <h1 class="text-center text-uppercase text-lg-start tracking-in-expand-fwd-top-1" data-translation="true"></h1>
+                    <p class="text-center text-lg-start description-text" data-translation="true"></p>
+                    <a href="#main-form-area" target="_self" class="cta-link-btn d-md-flex justify-content-md-center w-100 justify-content-lg-start">
+                        <button type="button" class="cta-btn w-100 opacity-0 rounded-3 py-3" data-translation="true"></button>
+                    </a>
+                </div>
+            </div>
+            <div id="solutions-area" class="p-3 my-4">
+                <h2 class="text-uppercase text-center subtitle opacity-0 pt-2" data-translation="true"></h2>
+                <div id="solutions-items" class="mt-3 gap-3 justify-content-between mx-lg-auto justify-content-md-evenly justify-content-lg-between">
+                    <div class="solution-item text-center">
+                        <i class="bi bi-window-sidebar icon-container"></i>
+                        <p class="text-data opacity-0">Landing Page</p>
+                    </div>
+                    <div class="solution-item text-center">
+                        <i class="bi bi-shop icon-container"></i>
+                        <p class="text-data opacity-0">E-commerce</p>
+                    </div>
+                    <div class="solution-item text-center">
+                        <i class="bi bi-newspaper icon-container"></i>
+                        <p class="text-data opacity-0">Blog</p>
+                    </div>
+                    <div class="solution-item text-center">
+                        <i class="bi bi-buildings-fill icon-container"></i>
+                        <p class="text-data opacity-0" data-translation="true"></p>
+                    </div>
+                    <div class="solution-item text-center">
+                        <i class="bi bi-chat-quote-fill icon-container"></i>
+                        <p class="text-data opacity-0" data-translation="true"></p>
+                    </div>
+                    <div class="solution-item text-center">
+                        <i class="bi bi-person-vcard-fill icon-container"></i>
+                        <p class="text-data opacity-0" data-translation="true"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="projects-area" class="p-3 my-2">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <div id="project-items" class="gap-4 mx-lg-auto">
+                    <div class="project-item w-100 d-flex flex-column" id="project-1">
+                        <div class="project-img-area">
+                            <img src="{{ url_for('static', filename='images/criptohacking project card.jpg') }}" alt="Project of landing page of platform of criptocurrencies CriptoHacking" class="w-100 project-img opacity-0">
+                        </div>
+                        <div class="project-datas-overlay d-flex justify-content-center flex-column p-3 position-fixed start-0 bottom-0 hidden">
+                            <div class="project-datas-modal mx-md-auto">
+                                <div class="project-img-top position-relative">
+                                    <button type="button" class="close-btn position-absolute p-0">
+                                        <i class="bi bi-x-circle-fill"></i>
+                                    </button>
+                                    <img src="{{ url_for('static', filename='images/criptohacking project card xxl.jpg') }}" alt="Project of landing page of platform of criptocurrencies CriptoHacking" class="w-100">
+                                </div>
+                                <div class="project-data">
+                                    <h3 class="px-3 pt-3 mb-md-3">CriptoHacking</h3>
+                                    <p class="px-3 mb-md-4" data-translation="true"></p>
+                                    <div class="project-options d-flex">
+                                        <a href="https://criptohacking.onrender.com/" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-box-arrow-up-right"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                        <a href="https://github.com/Manasses-Ndombele/Criptohacking" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-github"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="project-modal-btn w-100">
+                            <i class="bi bi-chevron-up"></i>
+                        </button>
+                    </div>
+                    <div class="project-item w-100 d-flex flex-column" id="project-2">
+                        <div class="project-img-area">
+                            <img src="{{ url_for('static', filename='images/borges company project card.jpg') }}" alt="Project of instituitional site Borges Company" class="w-100 project-img opacity-0">
+                        </div>
+                        <div class="project-datas-overlay d-flex justify-content-center flex-column p-3 position-fixed start-0 bottom-0 hidden">
+                            <div class="project-datas-modal mx-md-auto">
+                                <div class="project-img-top position-relative">
+                                    <button type="button" class="close-btn position-absolute p-0">
+                                        <i class="bi bi-x-circle-fill"></i>
+                                    </button>
+                                    <img src="{{ url_for('static', filename='images/borges company project card xxl.jpg') }}" alt="Project of instituitional site Borges Company" class="w-100">
+                                </div>
+                                <div class="project-data">
+                                    <h3 class="px-3 pt-3 mb-md-3">Borges Company</h3>
+                                    <p class="px-3 mb-md-4" data-translation="true"></p>
+                                    <div class="project-options d-flex">
+                                        <a href="https://borges-company.onrender.com/" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-box-arrow-up-right"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                        <a href="https://github.com/Manasses-Ndombele/Borges-Company" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-github"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="project-modal-btn w-100">
+                            <i class="bi bi-chevron-up"></i>
+                        </button>
+                    </div>
+                    <div class="project-item w-100 d-flex flex-column" id="project-3">
+                        <div class="project-img-area">
+                            <img src="{{ url_for('static', filename='images/xshop books project card.jpg') }}" alt="Project of online shop of books XShop Books" class="w-100 project-img opacity-0">
+                        </div>
+                        <div class="project-datas-overlay d-flex justify-content-center flex-column p-3 position-fixed start-0 bottom-0 hidden">
+                            <div class="project-datas-modal mx-md-auto">
+                                <div class="project-img-top position-relative">
+                                    <button type="button" class="close-btn position-absolute p-0">
+                                        <i class="bi bi-x-circle-fill"></i>
+                                    </button>
+                                    <img src="{{ url_for('static', filename='images/xshop books project card xxl.jpg') }}" alt="Project of online shop of books XShop Books" class="w-100">
+                                </div>
+                                <div class="project-data">
+                                    <h3 class="px-3 pt-3 mb-md-3">XShop Books</h3>
+                                    <p class="px-3 mb-md-4" data-translation="true"></p>
+                                    <div class="project-options d-flex">
+                                        <a href="https://xshop-books.onrender.com/" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-box-arrow-up-right"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                        <a href="https://github.com/Manasses-Ndombele/XShop-Books/" target="_blank" rel="external" class="d-block w-50">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-github"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="project-modal-btn w-100">
+                            <i class="bi bi-chevron-up"></i>
+                        </button>
+                    </div>
+                    <div class="project-item w-100 d-flex flex-column" id="project-4">
+                        <div class="project-img-area">
+                            <img src="{{ url_for('static', filename='images/portfolio project card.jpg') }}" alt="Project of portfolio freelancer of developer fullstack junior Manassés Ndombele" class="w-100 project-img opacity-0">
+                        </div>
+                        <div class="project-datas-overlay d-flex justify-content-center flex-column p-3 position-fixed start-0 bottom-0 hidden">
+                            <div class="project-datas-modal mx-md-auto">
+                                <div class="project-img-top position-relative">
+                                    <button type="button" class="close-btn position-absolute p-0">
+                                        <i class="bi bi-x-circle-fill"></i>
+                                    </button>
+                                    <img src="{{ url_for('static', filename='images/portfolio project card xxl.jpg') }}" alt="Project of portfolio freelancer of developer fullstack junior Manassés Ndombele" class="w-100">
+                                </div>
+                                <div class="project-data">
+                                    <h3 class="px-3 pt-3 mb-md-3" data-translation="true"></h3>
+                                    <p class="px-3 mb-md-4" data-translation="true"></p>
+                                    <div class="project-options d-flex">
+                                        <a href="https://github.com/Manasses-Ndombele/Portfolio/" target="_blank" rel="external" class="d-block w-100">
+                                            <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
+                                                <i class="bi bi-github"></i>
+                                                <span data-translation="true"></span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="project-modal-btn w-100">
+                            <i class="bi bi-chevron-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="skills-area" class="p-3 my-2 mx-lg-auto">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <div class="skill-category-container">
+                    <h3 class="text-uppercase" data-translation="true"></h3>
+                    <div class="skill-category-type px-md-3">
+                        <div class="skill-subcategory-container my-5">
+                            <h4 class="mb-3">1. Backend</h4>
+                            <div class="hardskills-items justify-content-md-start">
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Python Logo.jpg') }}" alt="Logo of Python language" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Python</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Django Logo.jpg') }}" alt="Logo of Django framework" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Django</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Flask Logo.jpg') }}" alt="Logo of Python Flask framework" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Flask</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/SQL Logo.jpg') }}" alt="Logo of SQL" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-subcategory-container my-5">
+                            <h4 class="mb-3">2. Frontend</h4>
+                            <div class="hardskills-items justify-content-md-start">
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/HTML Logo.jpg') }}" alt="Logo of HTML" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">HTML</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/CSS Logo.jpg') }}" alt="Logo of CSS" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">CSS</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Javascript Logo.jpg') }}" alt="Logo of JavaScript language" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">JavaScript</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Bootstrap Logo.jpg') }}" alt="Logo of Bootstrap CSS framework" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Bootstrap</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Sass Logo.jpg') }}" alt="Logo of Sass" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Sass</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-subcategory-container my-5">
+                            <h4 class="mb-3" data-translation="true"></h4>
+                            <div class="hardskills-items justify-content-md-start">
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Ajax Logo.jpg') }}" alt="Logo of JavaScript technoloy Ajax" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">Ajax</span>
+                                </div>
+                                <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
+                                    <img src="{{ url_for('static', filename='images/Json Logo.jpg') }}" alt="Logo of technoloy JSON" class="rounded-3 skill-img opacity-0">
+                                    <span class="text-uppercase text-data opacity-0">JSON</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category-type">
+                        <h3 class="text-uppercase mb-3" data-translation="true"></h3>
+                        <div id="skill-lists-area" class="d-md-flex justify-content-md-between gap-md-3">
+                            <ul class="skill-list-container p-0">
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-1">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-1">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-1">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-1">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-1">
+                                    <span data-translation="true"></span>
+                                </li>
+                            </ul>
+                            <ul class="skill-list-container p-0">
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-2">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-2">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-2">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-2">
+                                    <span data-translation="true"></span>
+                                </li>
+                                <li class="opacity-0 d-flex align-items-start gap-2 mb-2 my-2 item-group-2">
+                                    <span data-translation="true"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category-container mt-5">
+                    <h3 class="mb-3 text-uppercase" data-translation="true"></h3>
+                    <div class="softskills-items d-md-flex flex-md-wrap justify-content-md-around gap-md-5">
+                        <div class="softskill-item mb-3 text-md-center">
+                            <i class="bi bi-person-raised-hand icon-container"></i>
+                            <p class="text-data opacity-0" data-translation="true"></p>
+                        </div>
+                        <div class="softskill-item mb-3 text-md-center">
+                            <i class="bi bi-hourglass-split icon-container"></i>
+                            <p class="text-data opacity-0" data-translation="true"></p>
+                        </div>
+                        <div class="softskill-item mb-3 text-md-center">
+                            <i class="bi bi-terminal-x icon-container"></i>
+                            <p class="text-data opacity-0" data-translation="true"></p>
+                        </div>
+                        <div class="softskill-item mb-3 text-md-center">
+                            <i class="bi bi-palette-fill icon-container"></i>
+                            <p class="text-data opacity-0" data-translation="true"></p>
+                        </div>
+                        <div class="softskill-item mb-3 text-md-center">
+                            <i class="bi bi-eyeglasses icon-container"></i>
+                            <p class="text-data opacity-0" data-translation="true"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="profile-area">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <div id="profile-datas" class="d-flex flex-column align-items-center flex-md-row px-md-4 mx-lg-auto align-items-md-start justify-content-md-evenly gap-xl-3 justify-content-xl-center">
+                    <img src="{{ url_for('static', filename='images/perfil 2.png') }}" alt="Profile photo of developer fullstack freelancer junior Manassés Ndombele" class="rounded-4 opacity-0" id="profile-img">
+                    <div id="profile-data">
+                        <p class="p-3 text-center text-md-start description-text px-lg-0 opacity-0" data-translation="true"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="diferential-area" class="p-3 mb-2 mt-5">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <div id="diferential-items" class="justify-content-md-evenly justify-content-xl-center">
+                    <div class="diferential-item rounded-4 opacity-0 p-3">
+                        <header class="diferential-header-item d-flex align-items-center gap-1 mb-2 gap-3">
+                            <i class="bi bi-search me-md-2 me-md-2"></i>
+                            <span>SEO</span>
+                        </header>
+                        <div class="diferential-body">
+                            <p class="description-text" data-translation="true"></p>
+                        </div>
+                    </div>
+                    <div class="diferential-item rounded-4 opacity-0 p-3">
+                        <header class="diferential-header-item d-flex align-items-center gap-1 mb-2">
+                            <i class="bi bi-palette-fill me-md-2"></i>
+                            <span>Design</span>
+                        </header>
+                        <div class="diferential-body">
+                            <p class="description-text" data-translation="true"></p>
+                        </div>
+                    </div>
+                    <div class="diferential-item rounded-4 opacity-0 p-3">
+                        <header class="diferential-header-item d-flex align-items-center gap-1 mb-2">
+                            <i class="bi bi-graph-up-arrow me-md-2"></i>
+                            <span data-translation="true"></span>
+                        </header>
+                        <div class="diferential-body">
+                            <p class="description-text" data-translation="true"></p>
+                        </div>
+                    </div>
+                    <div class="diferential-item rounded-4 opacity-0 p-3">
+                        <header class="diferential-header-item d-flex align-items-center gap-1 mb-2">
+                            <i class="bi bi-lightbulb-fill me-md-2"></i>
+                            <span data-translation="true"></span>
+                        </header>
+                        <div class="diferential-body">
+                            <p class="description-text" data-translation="true"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-form-area">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <form class="p-3 mx-auto opacity-0">
+                    <div id="form-fields">
+                        <label for="name-field" class="form-label" data-translation="true"></label>
+                        <input type="text" id="name-field" class="form-control mb-3 rounded-pill" required>
+                        <label for="email-field" class="form-label">Email</label>
+                        <input type="email" id="email-field" class="form-control mb-3 rounded-pill" required>
+                        <label for="company-field" class="form-label" data-translation="true"></label>
+                        <input type="text" id="company-field" class="form-control mb-3 rounded-pill">
+                        <label for="message-field" class="form-label" data-translation="true"></label>
+                        <textarea id="message-field" class="form-control mb-3 rounded-4" rows="3" required></textarea>
+                    </div>
+                    <div id="form-action" class="d-md-flex justify-content-md-center">
+                        <button type="submit" class="w-100 py-1 text-uppercase rounded-3 mt-2" id="msg-client-submit" data-translation="true"></button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-message-client" id="open-modal-msg-client" class="visually-hidden">OPEN MODAL</button>
+            <div id="modal-message-client" class="modal fade" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" data-translation="true"></h5>
+                            <button type="button" data-bs-dismiss="modal" class="p-0 m-0">
+                                <i class="bi bi-x-circle-fill"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p data-translation="true"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="social-and-contacts-area" class="p-3 my-2">
+                <h2 class="text-uppercase text-center subtitle opacity-0 mb-4" data-translation="true"></h2>
+                <nav id="social-and-contacts-links" class="ps-md-2 mx-lg-auto justify-content-lg-evenly">
+                    <a href="https://www.mail.google.com/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
+                        <i class="bi bi-google me-md-2"></i>
+                        <section>
+                            <span class="d-block">Gmail</span>
+                            <span>manassesndombelefreelancer@gmail.com</span>
+                        </section>
+                    </a>
+                    <a href="https://www.linkedin.com/in/manass%C3%A9s-ndombele-384239327/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
+                        <i class="bi bi-linkedin me-md-2"></i>
+                        <section>
+                            <span class="d-block">LinkedIn</span>
+                            <span>Manassés Ndombele</span>
+                        </section>
+                    </a>
+                    <a href="https://github.com/Manasses-Ndombele/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
+                        <i class="bi bi-github me-md-2"></i>
+                        <section>
+                            <span class="d-block">GitHub</span>
+                            <span>Manassés-Ndombele</span>
+                        </section>
+                    </a>
+                    <a href="https://www.web.whatsapp.com/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
+                        <i class="bi bi-whatsapp me-md-2"></i>
+                        <section>
+                            <span class="d-block">Whatsapp</span>
+                            <span>+244 923 224 456</span>
+                        </section>
+                    </a>
+                    <a href="https://www.web.telegram.org/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
+                        <i class="bi bi-telegram me-md-2"></i>
+                        <section>
+                            <span class="d-block">Telegram</span>
+                            <span>+244 923 224 456</span>
+                        </section>
+                    </a>
+                </nav>
+            </div>
+            <div class="lang-process-overlay">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Carregando...</span>
+                  </div>
+            </div>
+        </main>
+        <footer class="p-2 text-center">
+            <p class="mb-0" data-translation="true"><i class="bi bi-cup-hot-fill"></i> </p>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</html>

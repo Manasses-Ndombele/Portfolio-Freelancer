@@ -1,0 +1,284 @@
+{
+    "a": [
+        {
+            "ptBR": "Soluções",
+            "enUS": "Solutions"
+        },
+        {
+            "ptBR": "Projetos",
+            "enUS": "Projects"
+        },
+        {
+            "ptBR": "Habilidades",
+            "enUS": "Skills"
+        },
+        {
+            "ptBR": "Sobre",
+            "enUS": "About"
+        }
+    ],
+    "option": [
+        {
+            "ptBR": "Português",
+            "enUS": "Portuguese"
+        },
+        {
+            "ptBR": "Inglês",
+            "enUS": "English"
+        }
+    ],
+    "button": [
+        {
+            "ptBR": "Vamos conversar!",
+            "enUS": "Talk to me!"
+        },
+        {
+            "ptBR": "Vamos conversar!",
+            "enUS": "Talk to me!"
+        },
+        {
+            "ptBR": "Enviar",
+            "enUS": "Send"
+        }
+    ],
+    "h1": [
+        {
+            "ptBR": "Impulsione seu negócio com soluções únicas e eficientes",
+            "enUS": "Boost your business with unique and efficient solutions"
+        }
+    ],
+    "p": [
+        {
+            "ptBR": "Deixe seu projeto nas mãos certas, meu trabalho é colocar seu negócio online, funcional e profissional de acordo com a sua ideia.",
+            "enUS": "Leave your project in the right hands, my job is to put your business online, functional and professional according to your idea."
+        },
+        {
+            "ptBR": "Site instituicional",
+            "enUS": "Site instituitional"
+        },
+        {
+            "ptBR": "Fórum",
+            "enUS": "Forum"
+        },
+        {
+            "ptBR": "Portfólio",
+            "enUS": "Portfolio"
+        },
+        {
+            "ptBR": "Neste projeto com foco no frontend simulei um funil de vendas para uma fictícia plataforma de conteúdo educacional sobre criptomoedas, um funil que começa na landing page vai para a página de checkout e termina na página de obrigado.",
+            "enUS": "In this project focused on the frontend, I simulated a sales funnel for a fictitious educational content platform about cryptocurrencies, a funnel that starts on the landing page, goes to the checkout page and ends on the thank you page."
+        },
+        {
+            "ptBR": "Neste projeto com foco no frontend criei um site instituicional completo para uma fictícia empresa prestadora de serviços no nicho de marketing digital e tecnologia.",
+            "enUS": "In this project focusing on the frontend, I created a complete institutional website for a fictitious company providing services in the digital marketing and technology niche."
+        },
+        {
+            "ptBR": "Neste projeto com foco no backend criei uma loja online completa, com funcionalidades administrativas como ver as vendas, adicionar produtos, etc. e também com funcionalidades de clientes como simular compras, ver e filtrar produtos etc. Autenticação de usuário, CRUD, e muito mais foram todos aplicados no projeto.",
+            "enUS": "In this backend-focused project, I created a complete online store, with administrative features such as viewing sales, adding products, etc., and also with customer features such as simulating purchases, viewing and filtering products, etc. User authentication, CRUD, and much more were all applied to the project."
+        },
+        {
+            "ptBR": "Neste projeto criei um portfólio freelancer para mim mesmo, com o objetivo de demonstrar minhas habilidades como programador fullstack junior e conquistar clientes.",
+            "enUS": "In this project I created a freelance portfolio for myself, with the aim of demonstrating my skills as a junior fullstack programmer and winning clients."
+        },
+        {
+            "ptBR": "Boa comunicação",
+            "enUS": "Good communication"
+        },
+        {
+            "ptBR": "Gestão de tempo",
+            "enUS": "Time management"
+        },
+        {
+            "ptBR": "Resolução de problemas",
+            "enUS": "Troubleshooting"
+        },
+        {
+            "ptBR": "Criatividade",
+            "enUS": "Creativity"
+        },
+        {
+            "ptBR": "Autodidatismo",
+            "enUS": "Self-teaching"
+        },
+        {
+            "ptBR": "Sou programador desde 2020, iniciei a minha jornada aprendendo Python através do YouTube, materiais em PDF, documentação e grupos de programadores, inicialmente o meu objetivo foi aprender segurança da informação mas acabei me apaixonando mais por programação e investindo nessa carreira graças a Deus consegui realizar o meu sonho de me tornar um Dev Fullstack e estou ansioso para transformar os meus códigos em soluções úteis no mercado.",
+            "enUS": "I have been a programmer since 2020, I started my journey learning Python through YouTube, PDF materials, documentation and programmer groups, initially my goal was to learn information security but I ended up falling more in love with programming and investing in this career, thank God I was able to fulfill my dream of becoming a Fullstack Dev and I am eager to transform my codes into useful solutions in the market."
+        },
+        {
+            "ptBR": "O importante não é apenas criar algo bom mas sim algo que possa ser encontrado, através das técnicas de SEO corretas e atuais que venho estudando todos dias.",
+            "enUS": "The important thing is not just to create something good but something that can be found, through the correct and current SEO techniques that I have been studying every day."
+        },
+        {
+            "ptBR": "Mesmo sem um designer de UI consigo me orientar em projetos simples fazendo um guia de design no Figma como por exemplo fiz nesse portfólio e em todos meus projetos.",
+            "enUS": "Even without a UI designer, I can guide myself in simple projects by creating a design guide in Figma, as I did in this portfolio and in all my projects."
+        },
+        {
+            "ptBR": "Faço com que os sites sejam carregados o mais rápido possível, seja comprimindo o tamanho de diversos arquivos, carregando o site em partes, conectando frameworks via CDN etc.",
+            "enUS": "I make websites load as fast as possible, whether it's by compressing the size of multiple files, loading the site in parts, connecting frameworks via CDN, etc."
+        },
+        {
+            "ptBR": "Uso métodos de segurança para a maioria dos tipos de ataques mais comuns da internet como SQL Injection, CSRF, etc.",
+            "enUS": "I use security methods for most common types of internet attacks such as SQL Injection, CSRF, etc."
+        },
+        {
+            "ptBR": "Obrigado pela sua confiança, a sua mensagem será respondida o mais rápido possível!",
+            "enUS": "Thank you for your trust, your message will be answered as soon as possible!"
+        },
+        {
+            "ptBR": "Para cada copo de café uma nova idéia!",
+            "enUS": "For every cup of coffee a new idea!"
+        }
+    ],
+    "h2": [
+        {
+            "ptBR": "O que posso fazer por você?",
+            "enUS": "What I can do for you?"
+        },
+        {
+            "ptBR": "Meus projetos",
+            "enUS": "My projects"
+        },
+        {
+            "ptBR": "Minhas habilidades",
+            "enUS": "My skills"
+        },
+        {
+            "ptBR": "Quem sou eu?",
+            "enUS": "About me"
+        },
+        {
+            "ptBR": "Qual é o meu diferencial?",
+            "enUS": "What makes me different?"
+        },
+        {
+            "ptBR": "Vamos conversar!",
+            "enUS": "Talk to me!"
+        },
+        {
+            "ptBR": "Redes sociais e contactos",
+            "enUS": "Social networks and contacts"
+        }
+    ],
+    "span": [
+        {
+            "ptBR": "Ver projeto",
+            "enUS": "View project"
+        },
+        {
+            "ptBR": "Ver repositório",
+            "enUS": "View repository"
+        },
+        {
+            "ptBR": "Ver projeto",
+            "enUS": "View project"
+        },
+        {
+            "ptBR": "Ver repositório",
+            "enUS": "View repository"
+        },
+        {
+            "ptBR": "Ver projeto",
+            "enUS": "View project"
+        },
+        {
+            "ptBR": "Ver repositório",
+            "enUS": "View repository"
+        },
+        {
+            "ptBR": "Ver repositório",
+            "enUS": "View repository"
+        },
+        {
+            "ptBR": "Desenvolvimento de sites completos (fullstack)",
+            "enUS": "Complete website development (fullstack)"
+        },
+        {
+            "ptBR": "Criação de SPAs (Single Page Aplication)",
+            "enUS": "SPA Creation (Single Page Aplication)"
+        },
+        {
+            "ptBR": "Desenvolvimento de sites responsivos",
+            "enUS": "Responsive website development"
+        },
+        {
+            "ptBR": "Integração de frontend com o backend",
+            "enUS": "Frontend integration with backend"
+        },
+        {
+            "ptBR": "Implementação de sistema de autenticação e autorização",
+            "enUS": "Implementation of authentication and authorization system"
+        },
+        {
+            "ptBR": "Consumo e integração com APIs",
+            "enUS": "Consumption and integration with APIs"
+        },
+        {
+            "ptBR": "Uso de pré-processadores CSS",
+            "enUS": "Using CSS preprocessors"
+        },
+        {
+            "ptBR": "Utilização de frameworks CSS",
+            "enUS": "Using CSS frameworks"
+        },
+        {
+            "ptBR": "Manipulação e troca de dados entre cliente e servidor",
+            "enUS": "Data manipulation and exchange between client and server"
+        },
+        {
+            "ptBR": "Criação de interações dinâmicas e atualizações em tempo real",
+            "enUS": "Creating dynamic interactions and real-time updates"
+        },
+        {
+            "ptBR": "Otimização de performance",
+            "enUS": "Performance optimization"
+        },
+        {
+            "ptBR": "Segurança",
+            "enUS": "Security"
+        }
+    ],
+    "h3": [
+        {
+            "ptBR": "Portfólio freelancer",
+            "enUS": "Portfolio freelancer"
+        },
+        {
+            "ptBR": "Habilidades técnicas",
+            "enUS": "Technical skills"
+        },
+        {
+            "ptBR": "Capacidades e competências",
+            "enUS": "Capabilities and skills"
+        },
+        {
+            "ptBR": "Habilidades Comportamentais",
+            "enUS": "Behavioral Skills"
+        }
+    ],
+    "h4": [
+        {
+            "ptBR": "3. Outras tecnologias",
+            "enUS": "3. Other technologies"
+        }
+    ],
+    "label": [
+        {
+            "ptBR": "Primeiro e último nome",
+            "enUS": "First and last name"
+        },
+        {
+            "ptBR": "Empresa (opcional)",
+            "enUS": "Company (optional)"
+        },
+        {
+            "ptBR": "Mensagem",
+            "enUS": "Message"
+        }
+    ],
+    "h5": [
+        {
+            "ptBR": "Obrigado!",
+            "enUS": "Thank you!"
+        }
+    ]
+}

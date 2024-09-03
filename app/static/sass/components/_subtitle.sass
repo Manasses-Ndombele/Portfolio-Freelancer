@@ -1,0 +1,11 @@
+@use "../base/variables" as var
+@use "../base/mixins" as mix
+
+.subtitle
+    font: 800 1.6em var.$montserrat
+    background: linear-gradient(to right, var.$secondary-color-a, var.$primary-color-a 70%)
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    @include mix.tablet()
+        font-size: 2.2em

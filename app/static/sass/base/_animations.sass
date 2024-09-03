@@ -1,0 +1,781 @@
+@use "mixins" as *
+
+@-webkit-keyframes tracking-in-expand-fwd-top
+    0%
+        letter-spacing: -0.5em
+        -webkit-transform: translateZ(-700px) translateY(-500px)
+        transform: translateZ(-700px) translateY(-500px)
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        -webkit-transform: translateZ(0) translateY(0)
+        transform: translateZ(0) translateY(0)
+        opacity: 1
+
+@keyframes tracking-in-expand-fwd-top
+    0%
+        letter-spacing: -0.5em
+        -webkit-transform: translateZ(-700px) translateY(-500px)
+        transform: translateZ(-700px) translateY(-500px)
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        -webkit-transform: translateZ(0) translateY(0)
+        transform: translateZ(0) translateY(0)
+        opacity: 1
+
+@-webkit-keyframes slide-in-blurred-top
+    0%
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2)
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(40px)
+        filter: blur(40px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1)
+        transform: translateY(0) scaleY(1) scaleX(1)
+        -webkit-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@keyframes slide-in-blurred-top
+    0%
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2)
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(40px)
+        filter: blur(40px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1)
+        transform: translateY(0) scaleY(1) scaleX(1)
+        -webkit-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@-webkit-keyframes slide-in-blurred-left
+    0%
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2)
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2)
+        -webkit-transform-origin: 100% 50%
+        transform-origin: 100% 50%
+        -webkit-filter: blur(40px)
+        filter: blur(40px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1)
+        transform: translateX(0) scaleY(1) scaleX(1)
+        -webkit-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@keyframes slide-in-blurred-left
+    0%
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2)
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2)
+        -webkit-transform-origin: 100% 50%
+        transform-origin: 100% 50%
+        -webkit-filter: blur(40px)
+        filter: blur(40px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1)
+        transform: translateX(0) scaleY(1) scaleX(1)
+        -webkit-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@-webkit-keyframes scale-in-top
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        opacity: 1
+
+@keyframes scale-in-top
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        opacity: 1
+
+@-webkit-keyframes slide-in-elliptic-right-fwd
+    0%
+        -webkit-transform: translateX(800px) rotateY(-30deg) scale(0)
+        transform: translateX(800px) rotateY(-30deg) scale(0)
+        -webkit-transform-origin: -100% 50%
+        transform-origin: -100% 50%
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0) rotateY(0) scale(1)
+        transform: translateX(0) rotateY(0) scale(1)
+        -webkit-transform-origin: -1800px 50%
+        transform-origin: -1800px 50%
+        opacity: 1
+
+@keyframes slide-in-elliptic-right-fwd
+    0%
+        -webkit-transform: translateX(800px) rotateY(-30deg) scale(0)
+        transform: translateX(800px) rotateY(-30deg) scale(0)
+        -webkit-transform-origin: -100% 50%
+        transform-origin: -100% 50%
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0) rotateY(0) scale(1)
+        transform: translateX(0) rotateY(0) scale(1)
+        -webkit-transform-origin: -1800px 50%
+        transform-origin: -1800px 50%
+        opacity: 1
+
+@-webkit-keyframes bounce-in-fwd
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+        opacity: 0
+
+    38%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+        opacity: 1
+
+    55%
+        -webkit-transform: scale(0.7)
+        transform: scale(0.7)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    72%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    81%
+        -webkit-transform: scale(0.84)
+        transform: scale(0.84)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    89%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    95%
+        -webkit-transform: scale(0.95)
+        transform: scale(0.95)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+@keyframes bounce-in-fwd
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+        opacity: 0
+
+    38%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+        opacity: 1
+
+    55%
+        -webkit-transform: scale(0.7)
+        transform: scale(0.7)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    72%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    81%
+        -webkit-transform: scale(0.84)
+        transform: scale(0.84)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    89%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    95%
+        -webkit-transform: scale(0.95)
+        transform: scale(0.95)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+@-webkit-keyframes puff-in-top
+    0%
+        -webkit-transform: scale(1.03)
+        transform: scale(1.03)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+
+@keyframes puff-in-top
+    0%
+        -webkit-transform: scale(2)
+        transform: scale(2)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transform-origin: 50% 0%
+        transform-origin: 50% 0%
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+
+@-webkit-keyframes slide-in-left
+    0%
+        -webkit-transform: translateX(-1000px)
+        transform: translateX(-1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes slide-in-left
+    0%
+        -webkit-transform: translateX(-1000px)
+        transform: translateX(-1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+
+@-webkit-keyframes fade-in-top
+    0%
+        -webkit-transform: translateY(-50px)
+        transform: translateY(-50px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes fade-in-top
+    0%
+        -webkit-transform: translateY(-50px)
+        transform: translateY(-50px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+@-webkit-keyframes scale-in-ver-top
+    0%
+        -webkit-transform: scaleY(0)
+        transform: scaleY(0)
+        -webkit-transform-origin: 100% 0%
+        transform-origin: 100% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: none
+        transform: none
+        -webkit-transform-origin: none
+        transform-origin: none
+        opacity: 1
+
+@keyframes scale-in-ver-top
+    0%
+        -webkit-transform: scaleY(0)
+        transform: scaleY(0)
+        -webkit-transform-origin: 100% 0%
+        transform-origin: 100% 0%
+        opacity: 1
+
+    100%
+        -webkit-transform: scaleY(1)
+        transform: scaleY(1)
+        -webkit-transform-origin: none
+        transform-origin: none
+        opacity: 1
+
+@-webkit-keyframes scale-in-hor-center
+    0%
+        -webkit-transform: scaleX(0)
+        transform: scaleX(0)
+        opacity: 1
+
+    100%
+        -webkit-transform: none
+        transform: none
+        opacity: 1
+
+@keyframes scale-in-hor-center
+    0%
+        -webkit-transform: scaleX(0)
+        transform: scaleX(0)
+        opacity: 1
+
+    100%
+        -webkit-transform: none
+        transform: none
+        opacity: 1
+
+@-webkit-keyframes flicker-in-1
+    0%
+        opacity: 0
+
+    10%
+        opacity: 0
+
+    10.1%
+        opacity: 1
+
+    10.2%
+        opacity: 0
+
+    20%
+        opacity: 0
+
+    20.1%
+        opacity: 1
+
+    20.6%
+        opacity: 0
+
+    30%
+        opacity: 0
+
+    30.1%
+        opacity: 1
+
+    30.5%
+        opacity: 1
+
+    30.6%
+        opacity: 0
+
+    45%
+        opacity: 0
+
+    45.1%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    55%
+        opacity: 1
+
+    55.1%
+        opacity: 0
+
+    57%
+        opacity: 0
+
+    57.1%
+        opacity: 1
+
+    60%
+        opacity: 1
+
+    60.1%
+        opacity: 0
+
+    65%
+        opacity: 0
+
+    65.1%
+        opacity: 1
+
+    75%
+        opacity: 1
+
+    75.1%
+        opacity: 0
+
+    77%
+        opacity: 0
+
+    77.1%
+        opacity: 1
+
+    85%
+        opacity: 1
+
+    85.1%
+        opacity: 0
+
+    86%
+        opacity: 0
+
+    86.1%
+        opacity: 1
+
+    100%
+        opacity: 1
+
+@keyframes flicker-in-1
+    0%
+        opacity: 0
+
+    10%
+        opacity: 0
+
+    10.1%
+        opacity: 1
+
+    10.2%
+        opacity: 0
+
+    20%
+        opacity: 0
+
+    20.1%
+        opacity: 1
+
+    20.6%
+        opacity: 0
+
+    30%
+        opacity: 0
+
+    30.1%
+        opacity: 1
+
+    30.5%
+        opacity: 1
+
+    30.6%
+        opacity: 0
+
+    45%
+        opacity: 0
+
+    45.1%
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    55%
+        opacity: 1
+
+    55.1%
+        opacity: 0
+
+    57%
+        opacity: 0
+
+    57.1%
+        opacity: 1
+
+    60%
+        opacity: 1
+
+    60.1%
+        opacity: 0
+
+    65%
+        opacity: 0
+
+    65.1%
+        opacity: 1
+
+    75%
+        opacity: 1
+
+    75.1%
+        opacity: 0
+
+    77%
+        opacity: 0
+
+    77.1%
+        opacity: 1
+
+    85%
+        opacity: 1
+
+    85.1%
+        opacity: 0
+
+    86%
+        opacity: 0
+
+    86.1%
+        opacity: 1
+
+    100%
+        opacity: 1
+
+@-webkit-keyframes tilt-in-right-1
+    0%
+        -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg)
+        transform: rotateX(-30deg) translateX(300px) skewX(30deg)
+        opacity: 0
+
+    100%
+        -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg)
+        transform: rotateX(0deg) translateX(0) skewX(0deg)
+        opacity: 1
+
+@keyframes tilt-in-right-1
+    0%
+        -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg)
+        transform: rotateX(-30deg) translateX(300px) skewX(30deg)
+        opacity: 0
+
+    100%
+        -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg)
+        transform: rotateX(0deg) translateX(0) skewX(0deg)
+        opacity: 1
+
+@-webkit-keyframes tracking-in-contract
+    0%
+        letter-spacing: 1em
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        letter-spacing: normal
+        opacity: 1
+
+@keyframes tracking-in-contract
+    0%
+        letter-spacing: 1em
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        letter-spacing: normal
+        opacity: 1
+
+@-webkit-keyframes focus-in-expand-fwd
+    0%
+        letter-spacing: -0.5em
+        -webkit-transform: translateZ(-800px)
+        transform: translateZ(-800px)
+        -webkit-filter: blur(12px)
+        filter: blur(12px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateZ(0)
+        transform: translateZ(0)
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@keyframes focus-in-expand-fwd
+    0%
+        letter-spacing: -0.5em
+        -webkit-transform: translateZ(-800px)
+        transform: translateZ(-800px)
+        -webkit-filter: blur(12px)
+        filter: blur(12px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateZ(0)
+        transform: translateZ(0)
+        -webkit-filter: blur(0)
+        filter: blur(0)
+        opacity: 1
+
+@-webkit-keyframes slide-out-elliptic-right-bck
+    0%
+        -webkit-transform: translateX(0) rotateY(0) scale(1)
+        transform: translateX(0) rotateY(0) scale(1)
+        -webkit-transform-origin: -1800px 50%
+        transform-origin: -1800px 50%
+        opacity: 1
+
+    100%
+        -webkit-transform: translateX(1000px) rotateY(-30deg) scale(0)
+        transform: translateX(1000px) rotateY(-30deg) scale(0)
+        -webkit-transform-origin: -100% 50%
+        transform-origin: -100% 50%
+        opacity: 1
+
+@keyframes slide-out-elliptic-right-bck
+    0%
+        -webkit-transform: translateX(0) rotateY(0) scale(1)
+        transform: translateX(0) rotateY(0) scale(1)
+        -webkit-transform-origin: -1800px 50%
+        transform-origin: -1800px 50%
+        opacity: 1
+
+    100%
+        -webkit-transform: translateX(1000px) rotateY(-30deg) scale(0)
+        transform: translateX(1000px) rotateY(-30deg) scale(0)
+        -webkit-transform-origin: -100% 50%
+        transform-origin: -100% 50%
+        opacity: 1
+
+.tracking-in-expand-fwd-top-1
+    +trackingInExpandFwdBold(1.8s)
+
+.tracking-in-expand-fwd-top-2
+    +trackingInExpandFwdBold(1.5s)
+
+.slide-in-blurred-top
+    -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both
+    animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both
+
+.slide-in-blurred-left-1
+    +slideInBlurredLeft(1.2s)
+
+.slide-in-blurred-left-2
+    +slideInBlurredLeft(1.8s)
+
+.slide-in-blurred-left-3
+    +slideInBlurredLeft(2.2s)
+
+.slide-in-blurred-left-4
+    +slideInBlurredLeft(2.8s)
+
+.scale-in-top
+    -webkit-animation: scale-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: scale-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important
+
+.slide-in-elliptic-right-fwd
+    -webkit-animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important
+
+.puff-in-top
+    -webkit-animation: puff-in-top 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+    animation: puff-in-top 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+    opacity: 1 !important
+
+.slide-in-left-1
+    +slideInLeft(1s)
+
+.slide-in-left-2
+    +slideInLeft(2s)
+
+.fade-in-top
+    -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    opacity: 1 !important
+
+.scale-in-ver-top
+    -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important
+    transform: none !important
+
+.scale-in-hor-center
+    -webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important
+    transform: none !important
+
+.flicker-in-1
+    -webkit-animation: flicker-in-1 2s linear both
+    animation: flicker-in-1 2s linear both
+
+.tilt-in-right-1
+    -webkit-animation: tilt-in-right-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: tilt-in-right-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.tracking-in-contract
+    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    opacity: 1 !important
+
+.focus-in-expand-fwd
+    -webkit-animation: focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    opacity: 1 !important
+
+.slide-out-elliptic-right-bck
+    -webkit-animation: slide-out-elliptic-right-bck 0.7s cubic-bezier(0.600, 0.040, 0.980, 0.335) both
+    animation: slide-out-elliptic-right-bck 0.7s cubic-bezier(0.600, 0.040, 0.980, 0.335) both

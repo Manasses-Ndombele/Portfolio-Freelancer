@@ -1,0 +1,19 @@
+@use "variables" as var
+
+body
+    background-color: var.$tertiary-color-a
+
+::selection
+    background-color: var.$secondary-color-b
+
+::-webkit-scrollbar
+    width: .8rem
+
+::-webkit-scrollbar-track
+    background-color: var.$tertiary-color-b
+
+::-webkit-scrollbar-thumb
+    background-color: var.$primary-color-b
+
+    &:hover
+        background-color: var.$secondary-color-b

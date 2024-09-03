@@ -1,0 +1,26 @@
+@use "../base/variables" as var
+@use "../base/mixins" as mix
+
+.cta-link-btn
+    text-decoration: none
+
+    .cta-btn
+        border: none
+        background-color: var.$secondary-color-a
+        color: var.$quartenary-color-a
+        font: 600 1.2em Arial, Helvetica, sans-serif
+        box-shadow: 0px 0px 60px var.$secondary-color-b
+        transition: all .5s ease-in
+        @include mix.tablet()
+            width: 40% !important
+            font-size: 1.5em
+            font-weight: 700
+
+        @include mix.desktop()
+            width: 60% !important
+
+        &:hover
+            background-color: transparent
+            border: 2px solid var.$secondary-color-a
+            box-shadow: inset 0px 0px 15px var.$secondary-color-a
+            text-shadow: 0px 0px 3px
