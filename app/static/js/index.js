@@ -42,15 +42,15 @@ function mainHandler(entries) {
     })
 }
 
-function updateLangSelect(langSelect) {
+function updateLangSelect(langSelect, htmlLang) {
     if (window.innerWidth >= 768 && window.innerWidth <= 991) {
         langSelect.getElementsByTagName('option')[0].textContent = 'PT'
         langSelect.getElementsByTagName('option')[1].textContent = 'EN'
     } else {
-        if (document.querySelector('html').getAttribute('lang') == 'pt-br') {
+        if (htmlLang == 'pt-br') {
             langSelect.getElementsByTagName('option')[0].textContent = 'Português'
             langSelect.getElementsByTagName('option')[1].textContent = 'Inglês'
-        } else if (document.querySelector('html').getAttribute('lang') == 'en-us') {
+        } else if (htmlLang == 'en-us') {
             langSelect.getElementsByTagName('option')[0].textContent = 'Portuguese'
             langSelect.getElementsByTagName('option')[1].textContent = 'English'
         }
@@ -106,7 +106,7 @@ function setTranslation(lang) {
 
                         for (let i = 0; i < elements.length; i++) {
                             if (elements[i].tagName === 'P') {
-                                elements[i].textContent = response.translations.p[i].ptBR
+                                elements[i].innerHTML = response.translations.p[i].ptBR
                             }
                         }
 
@@ -174,7 +174,7 @@ function setTranslation(lang) {
 
                         for (let i = 0; i < elements.length; i++) {
                             if (elements[i].tagName === 'P') {
-                                elements[i].textContent = response.translations.p[i].enUS
+                                elements[i].innerHTML = response.translations.p[i].enUS
                             }
                         }
 
@@ -224,6 +224,17 @@ function setTranslation(lang) {
     xhr.send()
 }
 
+function setFirstAnimations() {
+    let mainLinks = document.querySelectorAll('a.main-nav-link')
+    mainLinks[0].classList.add('slide-in-blurred-left-1')
+    mainLinks[1].classList.add('slide-in-blurred-left-2')
+    mainLinks[2].classList.add('slide-in-blurred-left-3')
+    mainLinks[3].classList.add('slide-in-blurred-left-4')
+    document.querySelector('div.input-group').classList.add('flicker-in-1')
+    document.querySelector('button#main-menu-btn').classList.add('flicker-in-1')
+    document.querySelector('h1').classList.add('tracking-in-expand-fwd-top-1')
+}
+
 window.onload = () => {
     let mainMenuBtn = document.querySelector('button#main-menu-btn')
     let mainMenu = document.querySelector('menu#main-menu')
@@ -231,6 +242,7 @@ window.onload = () => {
     let langSelect = document.querySelector('select.form-select')
     let projectModalsBtns = document.querySelectorAll('button.project-modal-btn')
     let closeBtnModals = document.querySelectorAll('button.close-btn')
+    let langProccessOverlay = document.querySelector('div#lang-proccess-overlay')
     let instersectionOpt = {
         root: null,
         rootMargin: '0px',
@@ -239,8 +251,10 @@ window.onload = () => {
 
     let mainObserver = new IntersectionObserver(mainHandler, instersectionOpt)
     let targets = [document.querySelector('img#profile-img'), document.forms[0]]
+    let htmlLang = document.querySelector('html').getAttribute('lang')
     setTranslation('pt-br')
-    updateLangSelect(langSelect)
+    updateLangSelect(langSelect, htmlLang)
+    setFirstAnimations()
     document.querySelectorAll('img.project-img').forEach(img => targets.push(img))
     document.querySelectorAll('i.icon-container').forEach(i => { targets.push(i) })
     document.querySelectorAll('img.skill-img').forEach(img => { targets.push(img) })
@@ -261,9 +275,13 @@ window.onload = () => {
     }
 
     langSelect.addEventListener('input', () => {
-        console.log(langSelect.value)
-        setTranslation(langSelect.value)
+        langProccessOverlay.classList.replace('d-none', 'd-flex')
+        setTimeout(() => {
+            setTranslation(langSelect.value)
+            langProccessOverlay.classList.replace('d-flex', 'd-none')
+        }, 3000)
     })
+
     inputGroupText.addEventListener('click', () => { langSelect.click() })
     projectModalsBtns.forEach(btn => {
         btn.onclick = () => {
@@ -281,46 +299,53 @@ window.onload = () => {
     closeBtnModals.forEach(btn => {
         btn.onclick = () => {
             let overlay = btn.parentElement.parentElement.parentElement
-            overlay.classList.replace('show', 'hidden')
-            overlay.childNodes[1].classList.add('slide-out-elliptic-right-bck')
             if (overlay.childNodes[1].classList.contains('tilt-in-right-1')) {
                 overlay.childNodes[1].classList.remove('tilt-in-right-1')
             }
 
+            overlay.childNodes[1].classList.add('slide-out-elliptic-right-bck')
             document.body.style.overflowY = 'auto'
+            overlay.classList.replace('show', 'hidden')
         }
     })
 
     document.forms[0].onsubmit = event => {
         event.preventDefault()
-        let nameField = document.querySelector('input#name-field').value // O nome deve ter apenas letras
-        let formFields = {
-            name: nameField,
-            email: document.querySelector('input#email-field').value,
-            company: document.querySelector('input#company-field').value,
-            message: document.querySelector('textarea#message-field').value
-        }
-
-        let xhr = new XMLHttpRequest()
-        xhr.open('POST', '/client-message')
-        xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState == xhr.DONE) {
-                if (xhr.status == 200) {
-                    console.log(JSON.parse(xhr.responseText))
-                    document.querySelector('button#open-modal-msg-client').click()
-                } else {
-                    if (document.querySelector('html').getAttribute('lang') == 'pt-br') {
-                        alert('Não foi possível enviar a sua mensagem, porfavor tente novamente mais tarde ou verifique bem os seus dados!')
-                    } else if (document.querySelector('html').getAttribute('lang') == 'en-us') {
-                        alert('Was not possible to send your message, please try again later or verify well your data!')
+        let nameField = document.querySelector('input#name-field').value
+        let nameVal = /^[A-Za-zÀ-ÿ]+( [A-Za-zÀ-ÿ]+)*$/
+        if (nameVal.test(nameField) === true) {
+            let formFields = {
+                name: nameField,
+                email: document.querySelector('input#email-field').value,
+                company: document.querySelector('input#company-field').value,
+                message: document.querySelector('textarea#message-field').value
+            }
+    
+            let xhr = new XMLHttpRequest()
+            xhr.open('POST', '/client-message')
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == xhr.DONE) {
+                    if (xhr.status == 200) {
+                        console.log(JSON.parse(xhr.responseText))
+                        document.querySelector('button#open-modal-msg-client').click()
+                    } else {
+                        if (htmlLang == 'pt-br') {
+                            alert('Não foi possível enviar a sua mensagem, porfavor tente novamente mais tarde ou verifique bem os seus dados!')
+                        } else if (htmlLang == 'en-us') {
+                            alert('Was not possible to send your message, please try again later or verify well your data!')
+                        }
                     }
                 }
             }
+    
+            xhr.send(JSON.stringify(formFields))
+        } else {
+            if (htmlLang == 'pt-br') {
+                alert('O seu nome deve ter apenas letras com ou sem acentos e apenas um espaço!')
+            } else if (htmlLang == 'en-us') {
+                alert('Your name must only have letters with or without accents and only one space!')
+            }
         }
-
-        xhr.send(JSON.stringify(formFields))
     }
 }
-
-let nameVal = /^[A-Za-z]{2, }$/gi

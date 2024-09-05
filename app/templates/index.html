@@ -19,9 +19,9 @@
                     <img src="{{ url_for('static', filename='images/Portfolio Logo.png') }}" alt="Logo of portfolio of freelancer developer Manassés Ndombele">
                     Dev
                     <br>
-                    Manassés
+                    Manasses
                 </a>
-                <button type="button" id="main-menu-btn" class="flicker-in-1 h-100 d-flex flex-column align-items-end my-auto me-2 py-3 rounded-2 d-md-none">
+                <button type="button" id="main-menu-btn" class="h-100 d-flex flex-column align-items-end my-auto me-2 py-3 rounded-2 d-md-none">
                     <span class="d-block mb-1"></span>
                     <span class="d-block mb-1"></span>
                     <span class="d-block"></span>
@@ -29,13 +29,13 @@
             </div>
             <menu id="main-menu" class="ps-4 mt-0 opacity-0 d-md-flex align-items-md-center justify-content-md-between gap-md-1 m-md-0 p-md-0">
                 <nav id="main-menu-nav" target="_self" class="d-flex flex-column align-items-start gap-2 gap-md-3 flex-md-row gap-lg-4 gap-xl-5">
-                    <a href="#solutions-area" target="_self" class="slide-in-blurred-left-1" data-translation="true"></a>
-                    <a href="#projects-area" target="_self" class="slide-in-blurred-left-2" data-translation="true"></a>
-                    <a href="#skills-area" target="_self" class="slide-in-blurred-left-3" data-translation="true"></a>
-                    <a href="#profile-area" target="_self" class="slide-in-blurred-left-4" data-translation="true"></a>
+                    <a href="#solutions-area" target="_self" class="opacity-0 main-nav-link" data-translation="true"></a>
+                    <a href="#projects-area" target="_self" class="opacity-0 main-nav-link" data-translation="true"></a>
+                    <a href="#skills-area" target="_self" class="opacity-0 main-nav-link" data-translation="true"></a>
+                    <a href="#profile-area" target="_self" class="opacity-0 main-nav-link" data-translation="true"></a>
                 </nav>
                 <div id="extra-options" class="mt-3 pe-3 w-100 mt-md-0 pe-md-0">
-                    <div class="input-group mb-3 mb-md-0 flicker-in-1">
+                    <div class="input-group mb-3 mb-md-0">
                         <span class="input-group-text">
                             <i class="bi bi-globe"></i>
                         </span>
@@ -51,13 +51,18 @@
             </menu>
         </header>
         <main>
+            <div id="lang-proccess-overlay" class="d-none position-fixed top-0 start-0 align-items-center justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+            </div>
             <div id="intro-area" class="p-3 p-3 d-lg-flex flex-lg-row-reverse align-items-lg-center justify-content-lg-between">
                 <div id="intro-area-img" class="w-100 d-flex justify-content-center justify-content-lg-end pe-lg-5">
                     <img src="{{ url_for('static', filename='images/perfil 1.jpg') }}" alt="Profile photo of developer fullstack freelancer Manassés Ndombele" class="rounded-circle me-lg-5 slide-in-blurred-top">
                 </div>
                 <div id="intro-area-body" class="mt-4 d-flex flex-column align-items-center gap-2 align-items-lg-start">
                     <span class="text-center text-lg-start tracking-in-expand-fwd-top-2"><strong>Manassés Ndombele</strong> - Dev Fullstack Junior</span>
-                    <h1 class="text-center text-uppercase text-lg-start tracking-in-expand-fwd-top-1" data-translation="true"></h1>
+                    <h1 class="text-center text-uppercase text-lg-start" data-translation="true"></h1>
                     <p class="text-center text-lg-start description-text" data-translation="true"></p>
                     <a href="#main-form-area" target="_self" class="cta-link-btn d-md-flex justify-content-md-center w-100 justify-content-lg-start">
                         <button type="button" class="cta-btn w-100 opacity-0 rounded-3 py-3" data-translation="true"></button>
@@ -220,7 +225,7 @@
                                     <h3 class="px-3 pt-3 mb-md-3" data-translation="true"></h3>
                                     <p class="px-3 mb-md-4" data-translation="true"></p>
                                     <div class="project-options d-flex">
-                                        <a href="https://github.com/Manasses-Ndombele/Portfolio/" target="_blank" rel="external" class="d-block w-100">
+                                        <a href="https://github.com/Manasses-Ndombele/Portfolio-Freelancer/" target="_blank" rel="external" class="d-block w-100">
                                             <button type="button" class="w-100 modal-cta-btn text-capitalize p-2 d-flex align-items-center gap-2 justify-content-center">
                                                 <i class="bi bi-github"></i>
                                                 <span data-translation="true"></span>
@@ -408,7 +413,7 @@
                     </div>
                     <div class="diferential-item rounded-4 opacity-0 p-3">
                         <header class="diferential-header-item d-flex align-items-center gap-1 mb-2">
-                            <i class="bi bi-lightbulb-fill me-md-2"></i>
+                            <i class="bi bi-shield-fill-check me-md-2"></i>
                             <span data-translation="true"></span>
                         </header>
                         <div class="diferential-body">
@@ -458,7 +463,7 @@
                         <i class="bi bi-google me-md-2"></i>
                         <section>
                             <span class="d-block">Gmail</span>
-                            <span>manassesndombelefreelancer@gmail.com</span>
+                            <span>ndombelemanasses@gmail.com</span>
                         </section>
                     </a>
                     <a href="https://www.linkedin.com/in/manass%C3%A9s-ndombele-384239327/" target="_blank" rel="external" class="d-flex align-items-start gap-2 mb-3 mb-md-0 link-container opacity-0">
@@ -491,16 +496,11 @@
                     </a>
                 </nav>
             </div>
-            <div class="lang-process-overlay">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Carregando...</span>
-                  </div>
-            </div>
         </main>
         <footer class="p-2 text-center">
-            <p class="mb-0" data-translation="true"><i class="bi bi-cup-hot-fill"></i> </p>
+            <p class="mb-0" data-translation="true"></p>
         </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.min.js') }}"></script>
 </html>
