@@ -47,13 +47,13 @@
             transition: all .6s ease-in
 
             &:first-child
-                width: 70%
+                width: 25px
 
             &:nth-child(2)
-                width: 80%
+                width: 35px
 
             &:last-child
-                width: 90%
+                width: 42px
 
     #main-menu
         height: 10px
@@ -172,7 +172,8 @@ main
         h1
             font-family: var.$montserrat
             font-weight: 900
-            color: var.$primary-color-a
+            color: var.$secondary-color-b
+            text-shadow: 2px 2px 4px var.$primary-color-a
             @include mix.tablet()
                 font-size: 2em
                 width: 80%
@@ -276,7 +277,7 @@ main
                         .close-btn
                             border: none
                             background-color: transparent
-                            color: var.$primary-color-a
+                            color: var.$secondary-color-b
                             font-size: 2em
                             top: 3%
                             right: 3%
@@ -317,8 +318,9 @@ main
                                 color: var.$quartenary-color-b
                                 -webkit-transition: all .5s ease-in
                                 transition: all .5s ease-in
+                                font-size: 1em
                                 @include mix.tablet()
-                                    font-size: 1.4em
+                                    font-size: 1.2em
 
                                 i
                                     font-size: 1.1em
@@ -345,7 +347,7 @@ main
             .project-modal-btn
                 border: none
                 background-color: var.$secondary-color-a
-                color: var.$secondary-color-b
+                color: var.$quartenary-color-a
                 font-size: 2em
 
     #skills-area
@@ -358,6 +360,7 @@ main
         h3
             font: 700 1.8em var.$montserrat
             color: var.$primary-color-a
+            text-shadow: 1px 1px 0px var.$secondary-color-b
 
         h4
             color: var.$secondary-color-a
@@ -581,7 +584,7 @@ main
                     width: 20rem
 
                 &:hover
-                    color: var.$tertiary-color-b
+                    text-shadow: 2px 2px 10px var.$quartenary-color-b
 
                     section
                         span

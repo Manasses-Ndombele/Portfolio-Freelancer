@@ -32,3 +32,17 @@ def client_message():
     db_session.add(new_message)
     db_session.commit()
     return jsonify(True)
+
+@app.route('/skills-covers', methods=['GET'])
+def skills_covers():
+    skills = ['Python', 'Django', 'Flask', 'SQL', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Sass', 'Ajax', 'Json']
+    skills_covers = []
+    for skill in skills:
+        skills_covers.append('static/images/' + skill + ' Logo.jpg')
+
+    return jsonify(skills_covers)
+
+@app.route('/projects-covers', methods=['GET'])
+def projects_covers():
+    projects = ['static/images/criptohacking project card xxl.jpg', 'static/images/borges company project card xxl.jpg', 'static/images/xshop books project card xxl.jpg', 'static/images/portfolio project card xxl.jpg']
+    return jsonify(projects)

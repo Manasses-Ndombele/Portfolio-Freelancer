@@ -235,6 +235,42 @@ function setFirstAnimations() {
     document.querySelector('h1').classList.add('tracking-in-expand-fwd-top-1')
 }
 
+function setSkillImages(imgs) {
+    let xhr = new XMLHttpRequest()
+    xhr.open('GET', '/skills-covers')
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE) {
+            if (xhr.status == 200) {
+                let response = JSON.parse(xhr.responseText)
+                for (let x = 0; x <= 10; x++) {
+                    imgs[x].setAttribute('src', response[x])
+                }
+            }
+        }
+    }
+
+    xhr.send()
+}
+
+function setProjectsImages(imgs) {
+    let xhr = new XMLHttpRequest()
+    xhr.open('GET', '/projects-covers')
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState == xhr.DONE) {
+            if (xhr.status == 200) {
+                let response = JSON.parse(xhr.responseText)
+                for (let x = 0; x <= 3; x++) {
+                    imgs[x].setAttribute('src', response[x])
+                }
+            }
+        }
+    }
+
+    xhr.send()
+}
+
 window.onload = () => {
     let mainMenuBtn = document.querySelector('button#main-menu-btn')
     let mainMenu = document.querySelector('menu#main-menu')
@@ -252,12 +288,16 @@ window.onload = () => {
     let mainObserver = new IntersectionObserver(mainHandler, instersectionOpt)
     let targets = [document.querySelector('img#profile-img'), document.forms[0]]
     let htmlLang = document.querySelector('html').getAttribute('lang')
+    let skillImages = document.querySelectorAll('img.skill-img')
+    let projectImages = document.querySelectorAll('img.project-img-modal')
     setTranslation('pt-br')
+    setProjectsImages(projectImages)
+    setSkillImages(skillImages)
     updateLangSelect(langSelect, htmlLang)
     setFirstAnimations()
     document.querySelectorAll('img.project-img').forEach(img => targets.push(img))
     document.querySelectorAll('i.icon-container').forEach(i => { targets.push(i) })
-    document.querySelectorAll('img.skill-img').forEach(img => { targets.push(img) })
+    skillImages.forEach(img => { targets.push(img) })
     document.querySelectorAll('a.link-container').forEach(a => { targets.push(a) })
     document.querySelectorAll('div.diferential-item').forEach(div => { targets.push(div) })
     document.querySelectorAll('button.cta-btn').forEach(button => { targets.push(button) })

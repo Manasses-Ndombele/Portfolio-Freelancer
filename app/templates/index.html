@@ -43,7 +43,7 @@
                         <span class="input-group-text">
                             <i class="bi bi-globe"></i>
                         </span>
-                        <select class="form-select">
+                        <select class="form-select" id="language-select">
                             <option value="pt-br" data-translation="true"></option>
                             <option value="en-us" data-translation="true"></option>
                         </select>
@@ -115,7 +115,7 @@
                                     <button type="button" class="close-btn position-absolute p-0">
                                         <i class="bi bi-x-circle-fill"></i>
                                     </button>
-                                    <img src="{{ url_for('static', filename='images/criptohacking project card xxl.jpg') }}" alt="Project of landing page of platform of criptocurrencies CriptoHacking" class="w-100">
+                                    <img alt="Project of landing page of platform of criptocurrencies CriptoHacking" class="w-100 project-img-modal">
                                 </div>
                                 <div class="project-data">
                                     <h3 class="px-3 pt-3 mb-md-3">CriptoHacking</h3>
@@ -151,7 +151,7 @@
                                     <button type="button" class="close-btn position-absolute p-0">
                                         <i class="bi bi-x-circle-fill"></i>
                                     </button>
-                                    <img src="{{ url_for('static', filename='images/borges company project card xxl.jpg') }}" alt="Project of instituitional site Borges Company" class="w-100">
+                                    <img alt="Project of instituitional site Borges Company" class="w-100 project-img-modal">
                                 </div>
                                 <div class="project-data">
                                     <h3 class="px-3 pt-3 mb-md-3">Borges Company</h3>
@@ -187,7 +187,7 @@
                                     <button type="button" class="close-btn position-absolute p-0">
                                         <i class="bi bi-x-circle-fill"></i>
                                     </button>
-                                    <img src="{{ url_for('static', filename='images/xshop books project card xxl.jpg') }}" alt="Project of online shop of books XShop Books" class="w-100">
+                                    <img alt="Project of online shop of books XShop Books" class="w-100 project-img-modal">
                                 </div>
                                 <div class="project-data">
                                     <h3 class="px-3 pt-3 mb-md-3">XShop Books</h3>
@@ -223,7 +223,7 @@
                                     <button type="button" class="close-btn position-absolute p-0">
                                         <i class="bi bi-x-circle-fill"></i>
                                     </button>
-                                    <img src="{{ url_for('static', filename='images/portfolio project card xxl.jpg') }}" alt="Project of portfolio freelancer of developer fullstack junior Manassés Ndombele" class="w-100">
+                                    <img alt="Project of portfolio freelancer of developer fullstack junior Manassés Ndombele" class="w-100 project-img-modal">
                                 </div>
                                 <div class="project-data">
                                     <h3 class="px-3 pt-3 mb-md-3" data-translation="true"></h3>
@@ -254,19 +254,19 @@
                             <h4 class="mb-3">1. Backend</h4>
                             <div class="hardskills-items justify-content-md-start">
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Python Logo.jpg') }}" alt="Logo of Python language" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of Python language" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Python</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Django Logo.jpg') }}" alt="Logo of Django framework" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of Django framework" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Django</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Flask Logo.jpg') }}" alt="Logo of Python Flask framework" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of Python Flask framework" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Flask</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/SQL Logo.jpg') }}" alt="Logo of SQL" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of SQL" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">SQL</span>
                                 </div>
                             </div>
@@ -275,23 +275,23 @@
                             <h4 class="mb-3">2. Frontend</h4>
                             <div class="hardskills-items justify-content-md-start">
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/HTML Logo.jpg') }}" alt="Logo of HTML" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of HTML" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">HTML</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/CSS Logo.jpg') }}" alt="Logo of CSS" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of CSS" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">CSS</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Javascript Logo.jpg') }}" alt="Logo of JavaScript language" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of JavaScript language" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">JavaScript</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Bootstrap Logo.jpg') }}" alt="Logo of Bootstrap CSS framework" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of Bootstrap CSS framework" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Bootstrap</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Sass Logo.jpg') }}" alt="Logo of Sass" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of Sass" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Sass</span>
                                 </div>
                             </div>
@@ -300,11 +300,11 @@
                             <h4 class="mb-3" data-translation="true"></h4>
                             <div class="hardskills-items justify-content-md-start">
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Ajax Logo.jpg') }}" alt="Logo of JavaScript technoloy Ajax" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of JavaScript technoloy Ajax" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">Ajax</span>
                                 </div>
                                 <div class="hardskill-item d-flex flex-column gap-2 align-items-center">
-                                    <img src="{{ url_for('static', filename='images/Json Logo.jpg') }}" alt="Logo of technoloy JSON" class="rounded-3 skill-img opacity-0">
+                                    <img alt="Logo of technoloy JSON" class="rounded-3 skill-img opacity-0">
                                     <span class="text-uppercase text-data opacity-0">JSON</span>
                                 </div>
                             </div>
