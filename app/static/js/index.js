@@ -348,28 +348,40 @@ window.onload = () => {
     document.forms[0].onsubmit = event => {
         event.preventDefault()
         let nameField = document.querySelector('input#name-field').value
+        let emailField = document.querySelector('input#email-field').value
+        let companyField = document.querySelector('input#company-field').value
+        let messageField = document.querySelector('textarea#message-field').value
         let nameVal = /^[A-Za-zÀ-ÿ]+( [A-Za-zÀ-ÿ]+)*$/
         if (nameVal.test(nameField) === true) {
             let formFields = {
                 name: nameField,
-                email: document.querySelector('input#email-field').value,
-                company: document.querySelector('input#company-field').value,
-                message: document.querySelector('textarea#message-field').value
+                email: emailField,
+                company: companyField,
+                message: messageField
             }
-    
+
+            function cleanForm() {
+                document.querySelector('input#name-field').value = ''
+                document.querySelector('input#email-field').value = ''
+                document.querySelector('input#company-field').value = ''
+                document.querySelector('textarea#message-field').value = ''
+            }
+
             let xhr = new XMLHttpRequest()
             xhr.open('POST', '/client-message')
             xhr.setRequestHeader('Content-Type', 'application/json')
             xhr.onreadystatechange = () => {
                 if (xhr.readyState == xhr.DONE) {
                     if (xhr.status == 200) {
-                        console.log(JSON.parse(xhr.responseText))
                         document.querySelector('button#open-modal-msg-client').click()
+                        cleanForm()
                     } else {
                         if (htmlLang == 'pt-br') {
                             alert('Não foi possível enviar a sua mensagem, porfavor tente novamente mais tarde ou verifique bem os seus dados!')
+                            cleanForm()
                         } else if (htmlLang == 'en-us') {
                             alert('Was not possible to send your message, please try again later or verify well your data!')
+                            cleanForm()
                         }
                     }
                 }
