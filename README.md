@@ -35,7 +35,7 @@ Instale o Python na sua máquina: [Python](https://www.python.org/)
 ```
 pip install -r requirements.txt
 
-python manage.py runserver
+python run.py
 ```
 
 Acesse o projeto em seu navegador no endereço que aparecer no terminal
